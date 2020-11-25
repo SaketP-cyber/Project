@@ -1,0 +1,74 @@
+<html>
+    <head>
+<style>
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #302c2c;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+tr:hover{
+background-color: #dddddd;
+
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(31, 108, 223);
+}
+
+</style>
+    </head>
+    <body>
+     
+<table border="1">
+
+        <tr>
+
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                 <th>Gender</th>
+                 <th>Action</th>
+                
+
+        </tr>
+ 
+       <h1>Available authors: {{ users.length  }}</h1> 
+        {{#each users}}
+        
+
+        <tr>
+
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+                <td>{{phone}}</td>
+                <td>{{gender}}</td>
+                
+                <td>
+                    
+                        <a href='/show/{{_id}}'>Connect</a>  
+                </td>
+
+        </tr>
+
+        {{else}}
+
+        
+                 No Record Found
+        
+        {{/each}}
+</table>
+
+ 
+    </body>
+</html>
